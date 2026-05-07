@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodapé </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto Slab", serif;
+        }
+
+        .rodape-area {
+            background-color: rgba(16, 49, 107, 1);
+            color: white;
+            padding: 60px 20px 20px;
+        }
+
+        .container-superior {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap; 
+            gap: 40px;
+        }
+
+        .logo-box {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .logo-box img {
+            max-width: 250px;
+            height: auto;
+            display: block;
+        }
+
+        .colunas-links {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+
+        .coluna h2 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: none;
+        }
+        .coluna ul {
+            list-style: none;
+        }
+
+        .coluna li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .coluna a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, outline 0.1s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .coluna a:focus-visible {
+            outline: 2px solid #00d4ff;
+            outline-offset: 4px;
+        }
+
+        .coluna a:hover {
+            border-bottom: 1px solid white;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 1200px;
+            margin: 50px auto 30px;
+        }
+
+        
+        .patrocinio {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .patrocinio img {
+            max-height: 45px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .patrocinio img:hover {
+            opacity: 1;
+        }
+
+       
+        @media (max-width: 850px) {
+            .container-superior {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo-box {
+                margin-bottom: 20px;
+            }
+
+            .colunas-links {
+                width: 100%;
+                text-align: center;
+            }
+
+            .criadores-grid {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .patrocinio {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="rodape-area" aria-label="Rodapé institucional">
+        <div class="container-superior">
+            
+            <div class="logo-box">
+                <img src="logo vlç.png" alt="Logotipo do Governo de Valença - Secretaria de Turismo">
+            </div>
+
+            <nav class="colunas-links" aria-label="Links úteis do rodapé">
+                
+                <div class="coluna">
+                    <h2>Contatos</h2>
+                    <ul>
+                        <li><a href="tel:7536418610">(75) 3641-8610</a></li>
+                    </ul>
+                </div>
+
+                <div class="coluna">
+                    <h2>Informações</h2>
+                    <ul>
+                        <li><a href="/sobre">Sobre</a></li>
+                        <li><a href="/transparencia">Transparência</a></li>
+                    </ul>
+                </div>
+
+                <div class="coluna">
+                    <h2>Criadores</h2>
+                    <div class="criadores-grid">
+                        <ul>
+                            <li>Elisa Menendez</li>
+                            <li>Rogerio Martins</li>
+                            <li>Addson Costa</li>
+                        
+                        <br>
+                            <li>Carla Magalhães</li>
+                            <li>Davi Martins</li>
+                            <li>Elísia Santos</li>
+                            <li>Luiza Helena Muniz</li>
+                            <li>Ravi Guimarães</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <h2>Redes sociais</h2>
+                    <ul>
+                        <li><a href="https://instagram.com/prefvalenca" target="_blank" rel="noopener noreferrer">Instagram: @prefvalenca</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+
+        <hr>
+
+        <section class="patrocinio" aria-label="Parceiros e Patrocinadores">
+            <img src="logocepedi-removebg-preview 1.png" alt="Logotipo CEPEDI">
+            <img src="logosoftex-removebg-preview 1.png" alt="Logotipo Softex">
+            <img src="logogoverno-removebg-preview 1.png" alt="Logotipo Governo Federal">
+            <img src="logoBFD-removebg-preview 1.png" alt="Logotipo Bolsa Futuro Digital">
+            <img src="logo_valenca 2.png" alt="Logotipo Prefeitura de Valença">
+            <img src="IF_Baiano_logo_in_black_and_white-removebg-preview 1.png" alt="Logotipo IF Baiano">
+        </section>
+    </footer>
+
+</body>
+</html>
